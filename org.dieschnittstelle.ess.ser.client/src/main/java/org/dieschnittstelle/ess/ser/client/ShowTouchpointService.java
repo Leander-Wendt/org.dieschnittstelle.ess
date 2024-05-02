@@ -1,15 +1,13 @@
 package org.dieschnittstelle.ess.ser.client;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
+import org.apache.http.StatusLine;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -244,16 +242,20 @@ public class ShowTouchpointService {
 
             // evaluate the result using getStatusLine(), use constants in
             // HttpStatus
+            StatusLine statusLine = response.getStatusLine();
 
             /* if successful: */
-
-            // create an object input stream using getContent() from the
-            // response entity (accessible via getEntity())
-
-            // read the touchpoint object from the input stream
-
-            // return the object that you have read from the response
-            return null;
+            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+                // create an object input stream using getContent() from the
+                // response entity (accessible via getEntity())
+                ObjectInputStream objectInputStream = new ObjectInputStream(response.getEntity().getContent());
+                // read the touchpoint object from the input stream
+                AbstractTouchpoint abstractTouchpoint = (AbstractTouchpoint) objectInputStream.readObject();
+                // return the object that you have read from the response
+                return abstractTouchpoint;
+            } else {
+                return null;
+            }
         } catch (Exception e) {
             logger.error("got exception: " + e, e);
             throw new RuntimeException(e);
