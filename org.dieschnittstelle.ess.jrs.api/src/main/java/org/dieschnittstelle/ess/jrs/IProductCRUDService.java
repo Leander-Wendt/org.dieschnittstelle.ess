@@ -5,7 +5,7 @@ import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 import java.util.List;
 
 /*
- * UE JRS2: 
+ * UE JRS2:
  * deklarieren Sie hier Methoden fuer:
  * - die Erstellung eines Produkts
  * - das Auslesen aller Produkte
@@ -20,15 +20,15 @@ import java.util.List;
  */
 public interface IProductCRUDService {
 
-	public IndividualisedProductItem createProduct(IndividualisedProductItem prod);
+    IndividualisedProductItem createProduct(IndividualisedProductItem prod);
 
-	public List<IndividualisedProductItem> readAllProducts();
+    List<IndividualisedProductItem> readAllProducts();
 
-	public IndividualisedProductItem updateProduct(long id,
-												   IndividualisedProductItem update);
+    IndividualisedProductItem updateProduct(long id,
+                                            IndividualisedProductItem update);
 
-	boolean deleteProduct(long id);
+    boolean deleteProduct(long id);
 
-	public IndividualisedProductItem readProduct(long id);
-			
+    IndividualisedProductItem readProduct(long id);
+
 }
