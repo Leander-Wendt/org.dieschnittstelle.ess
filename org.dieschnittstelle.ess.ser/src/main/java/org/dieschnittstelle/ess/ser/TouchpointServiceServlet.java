@@ -3,7 +3,6 @@ package org.dieschnittstelle.ess.ser;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.http.HttpStatus;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.logging.log4j.Logger;
