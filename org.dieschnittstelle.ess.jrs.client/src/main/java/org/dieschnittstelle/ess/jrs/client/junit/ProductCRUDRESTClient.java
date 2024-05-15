@@ -2,11 +2,15 @@ package org.dieschnittstelle.ess.jrs.client.junit;
 
 import java.util.List;
 
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 
 import org.dieschnittstelle.ess.jrs.IProductCRUDService;
+import org.dieschnittstelle.ess.jrs.client.jackson.LaissezFairePolymorphicJacksonProvider;
+import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
 public class ProductCRUDRESTClient {
 
@@ -14,16 +18,19 @@ public class ProductCRUDRESTClient {
 	
 	protected static Logger logger = org.apache.logging.log4j.LogManager.getLogger(ProductCRUDRESTClient.class);
 
-	public ProductCRUDRESTClient() throws Exception {
-
-
+	public ProductCRUDRESTClient() {
 		/*
 		 * TODO: JRS2: create a client for the web service using ResteasyClientBuilder and ResteasyWebTarget
 		 */
-		serviceProxy = null;
+		Client client = ClientBuilder.newBuilder().build();
+		client.register(LaissezFairePolymorphicJacksonProvider.class);
+
+		ResteasyWebTarget target = (ResteasyWebTarget) client.target("http://localhost:8080/api");
+
+		serviceProxy = target.proxy(IProductCRUDService.class);
 	}
 
-	public AbstractProduct createProduct(IndividualisedProductItem prod) {
+	public AbstractProduct createProduct(AbstractProduct prod) {
 		AbstractProduct created = serviceProxy.createProduct(prod);
 		// as a side-effect we set the id of the created product on the argument before returning
 		prod.setId(created.getId());
@@ -31,12 +38,12 @@ public class ProductCRUDRESTClient {
 	}
 
 	// TODO: activate this method for testing JRS3
-//	public AbstractProduct createCampaign(AbstractProduct prod) {
-//		AbstractProduct created = serviceProxy.createProduct(prod);
-//		// as a side-effect we set the id of the created product on the argument before returning
-//		prod.setId(created.getId());
-//		return created;
-//	}
+	public AbstractProduct createCampaign(AbstractProduct prod) {
+		AbstractProduct created = serviceProxy.createProduct(prod);
+		// as a side-effect we set the id of the created product on the argument before returning
+		prod.setId(created.getId());
+		return created;
+	}
 
 	public List<?> readAllProducts() {
 		return serviceProxy.readAllProducts();

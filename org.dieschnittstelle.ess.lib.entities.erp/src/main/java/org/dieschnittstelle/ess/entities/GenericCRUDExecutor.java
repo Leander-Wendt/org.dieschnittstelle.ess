@@ -1,5 +1,6 @@
 package org.dieschnittstelle.ess.entities;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
@@ -70,7 +71,7 @@ public class GenericCRUDExecutor<T extends GenericCRUDEntity> {
 
 		try {
 			return this.objects.remove(readObject(toDeleteId));
-		} catch (Exception e) {
+		} catch (EntityNotFoundException e) {
 			logger.error("got an exception trying to delete object for id "
 					+ toDeleteId + ". Supposedly, this object does not exist.",e);
 			return false;

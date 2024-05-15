@@ -9,6 +9,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Context;
 
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
 
@@ -50,6 +51,11 @@ public class TouchpointCRUDServiceImpl implements ITouchpointCRUDService {
     @Override
     public boolean deleteTouchpoint(long id) {
         return this.touchpointCRUD.deleteObject(id);
+    }
+
+    @Override
+    public StationaryTouchpoint updateTouchpoint(StationaryTouchpoint touchpoint) {
+        return this.touchpointCRUD.updateObject(touchpoint);
     }
 
     @Override

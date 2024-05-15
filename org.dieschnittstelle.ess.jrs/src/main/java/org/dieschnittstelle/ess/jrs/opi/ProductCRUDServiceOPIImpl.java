@@ -47,8 +47,8 @@ public class ProductCRUDServiceOPIImpl {
 	//  Sie JRS3 umgesetzt haben, koennen Sie die derzeit noch auskommentierte Codezeile aktivieren
 	public Campaign createCampaign(
 			Campaign prod) {
-//		return (Campaign) this.service.createProduct(prod);
-		return null;
+		return (Campaign) this.service.createProduct(prod);
+//		return null;
 	}
 
 	public List<IndividualisedProductItem> readAllProducts() {
