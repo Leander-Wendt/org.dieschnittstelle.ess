@@ -94,8 +94,7 @@ public class TestProductRESTService {
     @Test
     public void f_createCampaign() {
         /* this is for internally testing that campaigns can be written and read via the web api - not part of the exercise */
-        assertNotNull("campaign creation works",
-                client.createCampaign(CAMPAIGN));
+        assertNotNull("campaign creation works", client.createCampaign(CAMPAIGN));
     }
 
 }
