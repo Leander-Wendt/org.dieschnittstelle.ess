@@ -22,9 +22,9 @@ public class ProductCRUDServiceImpl implements IProductCRUDService {
     }
 
     @Override
-    public IndividualisedProductItem createProduct(
+    public AbstractProduct createProduct(
             AbstractProduct prod) {
-        return (IndividualisedProductItem) executor.createObject(prod);
+        return executor.createObject(prod);
     }
 
     @Override
