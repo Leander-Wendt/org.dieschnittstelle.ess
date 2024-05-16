@@ -46,11 +46,9 @@ public class GenericCRUDExecutor<T extends GenericCRUDEntity> {
 	 */
 	public T createObject(T obj) {
 		System.out.println("createObject(): " + obj);
-
 		// assign an id and add it to the list
 		obj.setId(++currentObjectId);
 		this.objects.add(obj);
-
 		return obj;
 	}
 
