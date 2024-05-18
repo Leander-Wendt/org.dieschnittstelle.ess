@@ -245,7 +245,7 @@ public class ShowTouchpointService {
             StatusLine statusLine = response.getStatusLine();
 
             /* if successful: */
-            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+            if (statusLine.getStatusCode() == HttpStatus.SC_CREATED) {
                 // create an object input stream using getContent() from the
                 // response entity (accessible via getEntity())
                 ObjectInputStream objectInputStream = new ObjectInputStream(response.getEntity().getContent());
