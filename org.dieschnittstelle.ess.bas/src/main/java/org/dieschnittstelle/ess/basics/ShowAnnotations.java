@@ -66,7 +66,7 @@ public class ShowAnnotations {
                 
                 try {
                     Method getter = CLASS.getDeclaredMethod(fieldAccessor);
-                    stringBuilder.append(displayName).append(":");
+                    stringBuilder.append(displayName).append(": ");
                     stringBuilder.append(getter.invoke(instance));
                     stringBuilder.append(", ");
                 } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {

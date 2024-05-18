@@ -6,10 +6,11 @@ import static org.dieschnittstelle.ess.utils.Utils.*;
 
 public class Chocolate implements IStockItem {
 
+
 	private int units;
-	
+
 	private String brandname;
-	
+
 	private int price;
 	
 	public Chocolate() {
