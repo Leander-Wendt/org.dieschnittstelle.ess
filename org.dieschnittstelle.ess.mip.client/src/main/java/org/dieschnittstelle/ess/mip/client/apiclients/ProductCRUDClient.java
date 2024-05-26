@@ -6,6 +6,7 @@ import org.dieschnittstelle.ess.entities.erp.Campaign;
 import org.dieschnittstelle.ess.mip.components.erp.crud.api.ProductCRUD;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 
+
 public class ProductCRUDClient implements ProductCRUD {
 
     private ProductCRUD serviceProxy;
