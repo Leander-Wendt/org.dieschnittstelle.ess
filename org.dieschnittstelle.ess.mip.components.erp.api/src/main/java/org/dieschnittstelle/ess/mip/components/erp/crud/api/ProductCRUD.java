@@ -2,6 +2,8 @@ package org.dieschnittstelle.ess.mip.components.erp.crud.api;
 
 import java.util.List;
 
+import jakarta.persistence.PostLoad;
+import jakarta.ws.rs.*;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.Campaign;
 
@@ -10,19 +12,28 @@ import org.dieschnittstelle.ess.entities.erp.Campaign;
  * this interface shall be implemented using an ApplicationScoped CDI bean with an EntityManager.
  * See TouchpointCRUDImpl for an example bean with a similar scope of functionality
  */
-
+// @Path("/products")
 public interface ProductCRUD {
 
+	@POST
 	AbstractProduct createProduct(AbstractProduct prod);
 
+	@GET
 	List<AbstractProduct> readAllProducts();
 
+	@PUT
 	AbstractProduct updateProduct(AbstractProduct update);
 
-	AbstractProduct readProduct(long productID);
+	@GET
+	@Path("/{id}")
+	AbstractProduct readProduct(@PathParam("id") long productID);
 
-	boolean deleteProduct(long productID);
+	@DELETE
+	@Path("/{id}")
+	boolean deleteProduct(@PathParam("id") long productID);
 
-	List<Campaign> getCampaignsForProduct(long productID);
+	@GET
+	@Path("/{id}/campaigns")
+	List<Campaign> getCampaignsForProduct(@PathParam("id") long productID);
 
 }
