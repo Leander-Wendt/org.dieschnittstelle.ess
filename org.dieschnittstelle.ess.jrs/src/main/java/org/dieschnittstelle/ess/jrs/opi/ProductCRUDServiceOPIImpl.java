@@ -8,7 +8,6 @@ import org.dieschnittstelle.ess.entities.erp.Campaign;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 import org.dieschnittstelle.ess.jrs.IProductCRUDService;
 import org.dieschnittstelle.ess.jrs.ProductCRUDServiceImpl;
-import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
@@ -30,22 +29,15 @@ public class ProductCRUDServiceOPIImpl {
 
 	private IProductCRUDService service;
 
-	public ProductCRUDServiceOPIImpl() {}
+	public ProductCRUDServiceOPIImpl() {
 
-	public ProductCRUDServiceOPIImpl(@Context ServletContext context) {
-		service = new ProductCRUDServiceImpl(context);
-	}
-
-	public IProductCRUDService getService() {
-		return service;
 	}
 
 	/*
 	 * TODO: implementieren Sie einen weiteren Konstruktor, der es Ihnen erlaubt, das service Attribut
 	 *  so zu instantiieren, dass es zur Laufzeit erfolgreich verwendet werden kann
 	 */
-	@POST
-	@Operation(operationId = "createProduct")
+
 	public IndividualisedProductItem createProduct(
 			IndividualisedProductItem prod) {
 		return (IndividualisedProductItem)this.service.createProduct(prod);
@@ -53,16 +45,12 @@ public class ProductCRUDServiceOPIImpl {
 
 	// TODO: ueberlegen Sie, wie Sie createCampaign() von createProduct() unterscheidbar machen koennen - wenn
 	//  Sie JRS3 umgesetzt haben, koennen Sie die derzeit noch auskommentierte Codezeile aktivieren
-	@POST
-	@Path("/campaign")
-	@Operation(operationId = "createCampaign")
 	public Campaign createCampaign(
 			Campaign prod) {
 		return (Campaign) this.service.createProduct(prod);
 //		return null;
 	}
 
-	@GET
 	public List<IndividualisedProductItem> readAllProducts() {
 		return (List)this.service.readAllProducts()
 				.stream()
@@ -70,22 +58,16 @@ public class ProductCRUDServiceOPIImpl {
 				.collect(Collectors.toList());
 	}
 
-	@PUT
-	@Path("/{id}")
-	public IndividualisedProductItem updateProduct(@PathParam("id") long id,
+	public IndividualisedProductItem updateProduct(long id,
 			IndividualisedProductItem update) {
 		return (IndividualisedProductItem)this.service.updateProduct(id,update);
 	}
 
-	@DELETE
-	@Path("/{id}")
-	public boolean deleteProduct(@PathParam("id") long id) {
+	public boolean deleteProduct(long id) {
 		return this.service.deleteProduct(id);
 	}
 
-	@GET
-	@Path("/{id}")
-	public IndividualisedProductItem readProduct(@PathParam("id") long id) {
+	public IndividualisedProductItem readProduct(long id) {
 		IndividualisedProductItem item = (IndividualisedProductItem)this.service.readProduct(id);
 		return item;
 	}
