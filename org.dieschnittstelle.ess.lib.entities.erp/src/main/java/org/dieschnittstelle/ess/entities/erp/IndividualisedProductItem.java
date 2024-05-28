@@ -10,6 +10,7 @@ import jakarta.json.bind.annotation.JsonbTypeDeserializer;
 import jakarta.json.bind.annotation.JsonbTypeSerializer;
 import jakarta.persistence.*;
 
+@Entity
 @JsonbTypeSerializer(JsonbJsonTypeInfoHandler.class)
 public class IndividualisedProductItem extends AbstractProduct implements Serializable {
 
@@ -23,7 +24,7 @@ public class IndividualisedProductItem extends AbstractProduct implements Serial
 	private ProductType productType;
 
 	private int expirationAfterStocked;
-	
+
 	public IndividualisedProductItem() {
 		logger.debug("<constructor>");
 	}

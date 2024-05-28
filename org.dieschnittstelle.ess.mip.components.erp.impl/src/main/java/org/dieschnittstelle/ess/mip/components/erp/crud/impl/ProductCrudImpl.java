@@ -34,7 +34,7 @@ public class ProductCrudImpl implements ProductCRUD {
 
     @Override
     public List<AbstractProduct> readAllProducts() {
-        return em.createQuery("select ap from AbstractProduct ap", AbstractProduct.class).getResultList();
+        return em.createQuery("SELECT DESTINCT ap FROM AbstractProduct ap", AbstractProduct.class).getResultList();
     }
 
     @Override
@@ -44,18 +44,18 @@ public class ProductCrudImpl implements ProductCRUD {
 
     @Override
     public AbstractProduct readProduct(long productID) {
-        return em.getReference(AbstractProduct.class, productID);
+        return em.find(AbstractProduct.class, productID);
     }
 
     @Override
     public boolean deleteProduct(long productID) {
-        em.remove(em.getReference(AbstractProduct.class, productID));
+        em.remove(em.find(AbstractProduct.class, productID));
         return true;
     }
 
     @Override
     public List<Campaign> getCampaignsForProduct(long productID) {
-        return em.createQuery("select c from Campaign c join c.bundles bundle where bundle.product.id = ?1", Campaign.class)
+        return em.createQuery("SELECT c FROM Campaign c JOIN c.bundles bundle WHERE bundle.product.id = ?1", Campaign.class)
                 .setParameter(1, productID).getResultList();
 
     }
