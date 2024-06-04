@@ -13,7 +13,7 @@ public class StockSystemClient implements StockSystem {
 
 	public StockSystemClient() throws Exception {
 		// TODO: remove the comments and complete the implementation
-		this.serviceProxy = ServiceProxyFactory.getInstance().getProxy(null);
+		this.serviceProxy = ServiceProxyFactory.getInstance().getProxy(StockSystemService.class);
 	}
 
 	// TODO: uncomment the commented sections from all the following methods and remove the default return statements
