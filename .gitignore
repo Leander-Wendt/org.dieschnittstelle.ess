@@ -97,4 +97,4 @@ fabric.properties
 /.idea/libraries/
 /.idea/jarRepositories.xml
 
-**/H2_DB.xml
+.idea/runConfigurations/H2_DB.xml
