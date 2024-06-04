@@ -96,3 +96,5 @@ fabric.properties
 /.idea/artifacts/
 /.idea/libraries/
 /.idea/jarRepositories.xml
+
+**/H2_DB.xml
