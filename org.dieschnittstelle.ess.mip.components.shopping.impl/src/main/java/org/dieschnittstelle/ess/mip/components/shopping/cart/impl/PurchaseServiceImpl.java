@@ -82,12 +82,8 @@ public class PurchaseServiceImpl implements PurchaseService {
     }
 
     public void purchase() throws ShoppingException {
-        logger.info("purchase()");
-
         if (this.customer == null || this.touchpoint == null) {
-            throw new RuntimeException(
-                    "cannot commit shopping session! Either customer or touchpoint has not been set: " + this.customer
-                            + "/" + this.touchpoint);
+            throw new RuntimeException("cannot commit shopping session! Either customer or touchpoint has not been set: " + this.customer + "/" + this.touchpoint);
         }
 
         verifyCampaigns();
@@ -103,8 +99,6 @@ public class PurchaseServiceImpl implements PurchaseService {
                 productsInCartForTransaction);
         transaction.setCompleted(true);
         customerTracking.createTransaction(transaction);
-
-        logger.info("purchase(): done.\n");
     }
 
     private void checkAndRemoveProductsFromStock() {
@@ -112,8 +106,7 @@ public class PurchaseServiceImpl implements PurchaseService {
             AbstractProduct itemProduct = productCRUD.readProduct(item.getErpProductId());
 
             if (item.isCampaign()) {
-                this.campaignTracking.purchaseCampaignAtTouchpoint(item.getErpProductId(), this.touchpoint,
-                        item.getUnits());
+                this.campaignTracking.purchaseCampaignAtTouchpoint(item.getErpProductId(), this.touchpoint, item.getUnits());
                 Campaign c = (Campaign) itemProduct;
 
                 c.getBundles().forEach(bundle -> {
