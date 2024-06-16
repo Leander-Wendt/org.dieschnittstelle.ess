@@ -11,5 +11,4 @@ public interface PurchaseService {
 	@POST
 	@Path("/{cartId}/purchase")
 	void purchaseCartAtTouchpointForCustomer(@PathParam("cartId") long shoppingCartId, @QueryParam("tpId") long touchpointId, @QueryParam("cusId") long customerId) throws ShoppingException;
-	
 }

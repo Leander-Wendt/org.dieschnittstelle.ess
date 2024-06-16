@@ -53,5 +53,4 @@ public class PurchaseServiceClient implements ShoppingBusinessDelegate {
     public void purchase() throws ShoppingException {
         this.purchaseServiceProxy.purchaseCartAtTouchpointForCustomer(this.shoppingCartClient.getShoppingCartEntityId(), abstractTouchpoint.getId(), customer.getId());
     }
-
 }
