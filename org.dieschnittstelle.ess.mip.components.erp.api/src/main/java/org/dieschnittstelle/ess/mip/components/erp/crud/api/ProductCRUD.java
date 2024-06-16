@@ -43,5 +43,4 @@ public interface ProductCRUD {
 	@GET
 	@Path("/{id}/campaigns")
 	List<Campaign> getCampaignsForProduct(@PathParam("id") long productID);
-
 }
