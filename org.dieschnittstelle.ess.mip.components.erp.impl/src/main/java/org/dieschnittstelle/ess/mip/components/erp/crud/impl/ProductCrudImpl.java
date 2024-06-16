@@ -1,5 +1,6 @@
 package org.dieschnittstelle.ess.mip.components.erp.crud.impl;
 
+
 import jakarta.annotation.Priority;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Alternative;
@@ -11,7 +12,6 @@ import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.Campaign;
 import org.dieschnittstelle.ess.mip.components.erp.crud.api.ProductCRUD;
 import org.dieschnittstelle.ess.utils.interceptors.Logged;
-
 import java.util.List;
 
 @Transactional
@@ -25,7 +25,6 @@ public class ProductCrudImpl implements ProductCRUD {
     @EntityManagerProvider.ERPDataAccessor
     EntityManager em;
 
-
     @Override
     public AbstractProduct createProduct(AbstractProduct prod) {
         em.persist(prod);
@@ -34,12 +33,13 @@ public class ProductCrudImpl implements ProductCRUD {
 
     @Override
     public List<AbstractProduct> readAllProducts() {
-        return em.createQuery("SELECT DESTINCT ap FROM AbstractProduct ap", AbstractProduct.class).getResultList();
+        return em.createQuery("SELECT DISTINCT product FROM AbstractProduct product", AbstractProduct.class).getResultList();
     }
 
     @Override
     public AbstractProduct updateProduct(AbstractProduct update) {
-        return em.merge(update);
+        em.merge(update);
+        return update;
     }
 
     @Override
@@ -50,13 +50,12 @@ public class ProductCrudImpl implements ProductCRUD {
     @Override
     public boolean deleteProduct(long productID) {
         em.remove(em.find(AbstractProduct.class, productID));
-        return true;
+        return em.find(AbstractProduct.class, productID) == null;
     }
 
     @Override
     public List<Campaign> getCampaignsForProduct(long productID) {
-        return em.createQuery("SELECT c FROM Campaign c JOIN c.bundles bundle WHERE bundle.product.id = ?1", Campaign.class)
+        return em.createQuery("SELECT campaign FROM Campaign campaign JOIN campaign.bundles bundle WHERE bundle.product.id = ?1", Campaign.class)
                 .setParameter(1, productID).getResultList();
-
     }
 }
