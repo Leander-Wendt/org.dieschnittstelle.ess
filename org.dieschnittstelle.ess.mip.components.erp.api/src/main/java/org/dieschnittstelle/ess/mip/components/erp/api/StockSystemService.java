@@ -3,6 +3,7 @@ package org.dieschnittstelle.ess.mip.components.erp.api;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import java.awt.*;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
  * - let the StockSystemClient in the client project access the web api via this interface - see ShoppingCartClient for an example
  */
 @Path("/stock")
+@RegisterRestClient
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface StockSystemService {
