@@ -49,5 +49,4 @@ public class ProductCRUDClient implements ProductCRUD {
     public List<Campaign> getCampaignsForProduct(long productID) {
         return serviceProxy.getCampaignsForProduct(productID);
     }
-
 }
