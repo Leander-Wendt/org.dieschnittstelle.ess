@@ -1,11 +1,10 @@
 package org.dieschnittstelle.ess.mip.client.apiclients;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.dieschnittstelle.ess.mip.components.erp.api.StockSystemService;
-import org.dieschnittstelle.ess.mip.components.erp.api.StockSystem;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
+import org.dieschnittstelle.ess.mip.components.erp.api.StockSystem;
+import org.dieschnittstelle.ess.mip.components.erp.api.StockSystemService;
+
+import java.util.List;
 
 public class StockSystemClient implements StockSystem {
 

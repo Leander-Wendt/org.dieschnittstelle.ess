@@ -1,20 +1,10 @@
 package org.dieschnittstelle.ess.entities.crm;
 
+import jakarta.persistence.*;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Collection;
 import java.util.HashSet;
-
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.PostLoad;
-import jakarta.persistence.PostPersist;
-import jakarta.persistence.PostRemove;
-import jakarta.persistence.PostUpdate;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreRemove;
-import jakarta.persistence.PreUpdate;
-
-import org.apache.logging.log4j.Logger;
 
 @Entity
 @DiscriminatorValue("mobile")

@@ -1,28 +1,13 @@
 package org.dieschnittstelle.ess.entities.crm;
 
+import jakarta.json.bind.annotation.JsonbDateFormat;
+import jakarta.persistence.*;
 import org.apache.logging.log4j.Logger;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import jakarta.json.bind.annotation.JsonbDateFormat;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.PostLoad;
-import jakarta.persistence.PostPersist;
-import jakarta.persistence.PostRemove;
-import jakarta.persistence.PostUpdate;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreRemove;
-import jakarta.persistence.PreUpdate;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 
 @Entity
 public class CustomerTransaction implements Serializable {

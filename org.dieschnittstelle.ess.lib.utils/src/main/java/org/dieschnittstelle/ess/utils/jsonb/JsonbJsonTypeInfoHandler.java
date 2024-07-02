@@ -1,16 +1,8 @@
 package org.dieschnittstelle.ess.utils.jsonb;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.*;
-
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.logging.log4j.Logger;
-
 import jakarta.json.JsonObject;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
@@ -22,11 +14,17 @@ import jakarta.json.bind.serializer.JsonbSerializer;
 import jakarta.json.bind.serializer.SerializationContext;
 import jakarta.json.stream.JsonGenerator;
 import jakarta.json.stream.JsonParser;
-import java.lang.reflect.Type;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.stream.Collectors;
+import org.apache.logging.log4j.Logger;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * this is our own implementation of the @JsonTypeInfo semantics from Jackson using

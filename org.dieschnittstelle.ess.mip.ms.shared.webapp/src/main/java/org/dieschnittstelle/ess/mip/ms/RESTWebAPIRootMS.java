@@ -2,7 +2,6 @@ package org.dieschnittstelle.ess.mip.ms;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
-
 import org.apache.logging.log4j.Logger;
 
 /*

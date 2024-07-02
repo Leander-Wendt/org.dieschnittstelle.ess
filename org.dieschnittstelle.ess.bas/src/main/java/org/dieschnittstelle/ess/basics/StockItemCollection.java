@@ -1,18 +1,17 @@
 package org.dieschnittstelle.ess.basics;
 
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StockItemCollection {
 	

@@ -1,16 +1,15 @@
 package org.dieschnittstelle.ess.jrs.client.junit;
 
-import java.util.List;
-
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
-
 import org.dieschnittstelle.ess.jrs.IProductCRUDService;
 import org.dieschnittstelle.ess.jrs.client.jackson.LaissezFairePolymorphicJacksonProvider;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
+
+import java.util.List;
 
 public class ProductCRUDRESTClient {
 

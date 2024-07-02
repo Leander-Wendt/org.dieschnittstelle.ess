@@ -1,19 +1,18 @@
 package org.dieschnittstelle.ess.mip.components.crm.impl;
 
-import java.util.List;
-
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-
-import org.dieschnittstelle.ess.entities.crm.Customer;
-import org.dieschnittstelle.ess.mip.components.crm.api.CustomerTracking;
-import org.dieschnittstelle.ess.entities.crm.CustomerTransactionShoppingCartItem;
-import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.Customer;
+import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
+import org.dieschnittstelle.ess.entities.crm.CustomerTransactionShoppingCartItem;
+import org.dieschnittstelle.ess.mip.components.crm.api.CustomerTracking;
 import org.dieschnittstelle.ess.mip.components.crm.crud.impl.CustomerTransactionCRUD;
 import org.dieschnittstelle.ess.utils.interceptors.Logged;
+
+import java.util.List;
 
 /**
  * allows read/write access to a customer's shopping history

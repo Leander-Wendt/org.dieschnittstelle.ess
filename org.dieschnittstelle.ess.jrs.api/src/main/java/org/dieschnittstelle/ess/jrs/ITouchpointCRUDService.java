@@ -1,9 +1,9 @@
 package org.dieschnittstelle.ess.jrs;
 
-import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
-
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
+
 import java.util.List;
 
 @Path("/touchpoints")

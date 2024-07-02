@@ -1,15 +1,14 @@
 package org.dieschnittstelle.ess.ser;
 
-import java.io.File;
-
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
-
+import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 import org.dieschnittstelle.ess.entities.erp.ProductType;
-import org.apache.logging.log4j.Logger;
+
+import java.io.File;
 
 /*
  * this listener manages a crud executor for proucts in the same was as the TouchpointsServletContextListener for touchpoints

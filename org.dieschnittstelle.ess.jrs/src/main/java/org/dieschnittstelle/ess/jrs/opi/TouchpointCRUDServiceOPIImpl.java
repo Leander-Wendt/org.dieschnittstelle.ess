@@ -1,15 +1,14 @@
 package org.dieschnittstelle.ess.jrs.opi;
 
-import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
-import org.dieschnittstelle.ess.jrs.ITouchpointCRUDService;
-import org.dieschnittstelle.ess.jrs.TouchpointCRUDServiceImpl;
-
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
+import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
+import org.dieschnittstelle.ess.jrs.ITouchpointCRUDService;
+import org.dieschnittstelle.ess.jrs.TouchpointCRUDServiceImpl;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 
 import java.util.List;

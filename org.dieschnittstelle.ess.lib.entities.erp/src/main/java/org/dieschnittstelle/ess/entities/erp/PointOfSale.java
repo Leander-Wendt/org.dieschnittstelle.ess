@@ -1,19 +1,9 @@
 package org.dieschnittstelle.ess.entities.erp;
 
-import java.io.Serializable;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.PostLoad;
-import jakarta.persistence.PostPersist;
-import jakarta.persistence.PostRemove;
-import jakarta.persistence.PostUpdate;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreRemove;
-import jakarta.persistence.PreUpdate;
-
+import jakarta.persistence.*;
 import org.apache.logging.log4j.Logger;
+
+import java.io.Serializable;
 
 @Entity
 public class PointOfSale implements Serializable {

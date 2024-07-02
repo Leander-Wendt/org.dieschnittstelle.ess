@@ -2,7 +2,7 @@ package org.dieschnittstelle.ess.basics.reflection.stockitemtypes;
 
 import org.dieschnittstelle.ess.basics.IStockItem;
 
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import static org.dieschnittstelle.ess.utils.Utils.show;
 
 public class Chocolate implements IStockItem {
 

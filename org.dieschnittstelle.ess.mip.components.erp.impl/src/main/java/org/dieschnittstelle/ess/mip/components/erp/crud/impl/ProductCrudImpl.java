@@ -12,6 +12,7 @@ import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.Campaign;
 import org.dieschnittstelle.ess.mip.components.erp.crud.api.ProductCRUD;
 import org.dieschnittstelle.ess.utils.interceptors.Logged;
+
 import java.util.List;
 
 @Transactional

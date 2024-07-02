@@ -1,10 +1,10 @@
 package org.dieschnittstelle.ess.mip.components.erp.crud.impl;
 
-import java.util.List;
-
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 import org.dieschnittstelle.ess.entities.erp.PointOfSale;
 import org.dieschnittstelle.ess.entities.erp.StockItem;
+
+import java.util.List;
 
 /*
  * TODO MIP+JPA3/4/6:

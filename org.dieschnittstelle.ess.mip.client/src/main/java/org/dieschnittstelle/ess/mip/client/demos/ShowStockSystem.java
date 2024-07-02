@@ -1,19 +1,15 @@
 package org.dieschnittstelle.ess.mip.client.demos;
 
-import static org.dieschnittstelle.ess.mip.client.Constants.PRODUCT_1;
-import static org.dieschnittstelle.ess.mip.client.Constants.PRODUCT_2;
-import static org.dieschnittstelle.ess.mip.client.Constants.TOUCHPOINT_1;
-import static org.dieschnittstelle.ess.mip.client.Constants.TOUCHPOINT_2;
-
 import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.mip.client.apiclients.ServiceProxyFactory;
-import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
-import org.dieschnittstelle.ess.mip.client.apiclients.StockSystemClient;
-import org.dieschnittstelle.ess.utils.Utils;
 import org.dieschnittstelle.ess.mip.client.apiclients.ProductCRUDClient;
+import org.dieschnittstelle.ess.mip.client.apiclients.ServiceProxyFactory;
+import org.dieschnittstelle.ess.mip.client.apiclients.StockSystemClient;
 import org.dieschnittstelle.ess.mip.client.apiclients.TouchpointAccessClient;
+import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
+import org.dieschnittstelle.ess.utils.Utils;
 
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import static org.dieschnittstelle.ess.mip.client.Constants.*;
+import static org.dieschnittstelle.ess.utils.Utils.show;
 
 public class ShowStockSystem {
 
