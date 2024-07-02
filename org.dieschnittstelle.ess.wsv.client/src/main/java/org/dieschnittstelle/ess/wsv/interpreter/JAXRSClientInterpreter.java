@@ -1,33 +1,18 @@
 package org.dieschnittstelle.ess.wsv.interpreter;
 
 
-import java.io.ByteArrayOutputStream;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import org.apache.logging.log4j.Logger;
-
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.core.HttpHeaders;
-import jakarta.ws.rs.core.MediaType;
-
-import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ByteArrayEntity;
-
+import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.utils.Http;
 import org.dieschnittstelle.ess.wsv.interpreter.json.JSONObjectSerialiser;
 
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 
 
 /*

@@ -1,16 +1,15 @@
 package org.dieschnittstelle.ess.wsv.client;
 
-import java.util.List;
-
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.crm.Address;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 import org.dieschnittstelle.ess.utils.Utils;
 import org.dieschnittstelle.ess.wsv.client.service.ITouchpointCRUDServiceClient;
-
 import org.dieschnittstelle.ess.wsv.interpreter.JAXRSClientInterpreter;
 
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import java.util.List;
+
+import static org.dieschnittstelle.ess.utils.Utils.show;
 
 public class AccessRESTServiceWithInterpreter {
 

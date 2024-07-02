@@ -1,10 +1,13 @@
 package org.dieschnittstelle.ess.mip.client;
 
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.CampaignExecution;
 import org.dieschnittstelle.ess.entities.crm.Customer;
+import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
+import org.dieschnittstelle.ess.mip.client.apiclients.*;
+import org.dieschnittstelle.ess.mip.client.shopping.PurchaseServiceClient;
 import org.dieschnittstelle.ess.mip.client.shopping.ShoppingBusinessDelegate;
 import org.dieschnittstelle.ess.mip.client.shopping.ShoppingSession;
-import org.dieschnittstelle.ess.mip.client.shopping.PurchaseServiceClient;
 import org.dieschnittstelle.ess.mip.components.crm.api.CampaignTracking;
 import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
 import org.dieschnittstelle.ess.mip.components.crm.api.CustomerTracking;
@@ -12,13 +15,10 @@ import org.dieschnittstelle.ess.mip.components.crm.api.TouchpointAccess;
 import org.dieschnittstelle.ess.mip.components.crm.crud.api.CustomerCRUD;
 import org.dieschnittstelle.ess.mip.components.erp.api.StockSystem;
 import org.dieschnittstelle.ess.mip.components.erp.crud.api.ProductCRUD;
-import org.dieschnittstelle.ess.entities.crm.CampaignExecution;
-import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
-import org.dieschnittstelle.ess.mip.client.apiclients.*;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.dieschnittstelle.ess.mip.client.Constants.*;

@@ -1,15 +1,12 @@
 package org.dieschnittstelle.ess.mip.components.erp.crud.api;
 
-import java.util.List;
-
-import jakarta.annotation.Priority;
-import jakarta.enterprise.inject.Alternative;
-import jakarta.interceptor.Interceptor;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.Campaign;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+
+import java.util.List;
 
 /*
  * TODO MIP+JPA1/2/5:

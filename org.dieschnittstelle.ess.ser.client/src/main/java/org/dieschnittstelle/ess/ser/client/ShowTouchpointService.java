@@ -1,10 +1,5 @@
 package org.dieschnittstelle.ess.ser.client;
 
-import java.io.*;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.StatusLine;
@@ -19,7 +14,16 @@ import org.dieschnittstelle.ess.entities.crm.Address;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 import org.dieschnittstelle.ess.utils.Http;
 
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+
+import static org.dieschnittstelle.ess.utils.Utils.show;
+import static org.dieschnittstelle.ess.utils.Utils.step;
 
 public class ShowTouchpointService {
 

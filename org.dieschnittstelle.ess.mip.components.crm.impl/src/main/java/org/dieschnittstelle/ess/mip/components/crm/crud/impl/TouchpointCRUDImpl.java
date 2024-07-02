@@ -1,18 +1,17 @@
 package org.dieschnittstelle.ess.mip.components.crm.crud.impl;
 
-import java.util.List;
-
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
-
-import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
 import org.dieschnittstelle.ess.mip.components.crm.crud.api.TouchpointCRUD;
 import org.dieschnittstelle.ess.utils.interceptors.Logged;
+
+import java.util.List;
 
 import static org.dieschnittstelle.ess.utils.Utils.show;
 

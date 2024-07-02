@@ -2,7 +2,6 @@ package org.dieschnittstelle.ess.mip.components.crm.crud.api;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 

@@ -1,17 +1,12 @@
 package org.dieschnittstelle.ess.ser;
 
-import org.apache.http.HttpStatus;
-import org.apache.logging.log4j.Logger;
-
 import jakarta.servlet.AsyncContext;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.ObjectOutputStream;
+import org.apache.http.HttpStatus;
+import org.apache.logging.log4j.Logger;
 
 import static org.dieschnittstelle.ess.utils.Utils.show;
 

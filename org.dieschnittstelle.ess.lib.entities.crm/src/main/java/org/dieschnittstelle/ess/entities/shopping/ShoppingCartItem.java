@@ -1,11 +1,11 @@
 package org.dieschnittstelle.ess.entities.shopping;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.json.bind.annotation.JsonbTransient;
+import jakarta.persistence.*;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 
-import jakarta.json.bind.annotation.JsonbTransient;
-import jakarta.persistence.*;
 import java.io.Serializable;
 
 /**

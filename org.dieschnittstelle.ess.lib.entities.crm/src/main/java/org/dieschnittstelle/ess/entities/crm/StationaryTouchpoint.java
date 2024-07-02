@@ -1,23 +1,12 @@
 package org.dieschnittstelle.ess.entities.crm;
 
+import jakarta.json.bind.annotation.JsonbTypeSerializer;
+import jakarta.persistence.*;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.utils.jsonb.JsonbJsonTypeInfoHandler;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 import java.io.Serializable;
-
-import jakarta.json.bind.annotation.JsonbTypeSerializer;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.PostLoad;
-import jakarta.persistence.PostPersist;
-import jakarta.persistence.PostRemove;
-import jakarta.persistence.PostUpdate;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreRemove;
-import jakarta.persistence.PreUpdate;
 
 /**
  * @author kreutel

@@ -1,8 +1,8 @@
 package org.dieschnittstelle.ess.wsv.client.service;
 
+import jakarta.ws.rs.*;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 
-import jakarta.ws.rs.*;
 import java.util.List;
 
 @Path("/touchpoints")

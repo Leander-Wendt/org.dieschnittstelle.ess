@@ -1,7 +1,7 @@
 package org.dieschnittstelle.ess.mip.client;
 
 import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.mip.client.apiclients.*;
+import org.dieschnittstelle.ess.mip.client.apiclients.ServiceProxyFactory;
 
 public class TotalUsecaseMS {
 

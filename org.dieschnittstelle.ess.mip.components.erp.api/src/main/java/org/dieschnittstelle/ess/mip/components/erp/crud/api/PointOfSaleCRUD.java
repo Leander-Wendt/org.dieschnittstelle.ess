@@ -2,10 +2,10 @@ package org.dieschnittstelle.ess.mip.components.erp.crud.api;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import java.util.List;
-
 import org.dieschnittstelle.ess.entities.erp.PointOfSale;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+
+import java.util.List;
 
 
 @Path("/pointsOfSale")

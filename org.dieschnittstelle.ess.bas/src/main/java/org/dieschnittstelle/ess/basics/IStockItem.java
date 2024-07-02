@@ -1,7 +1,5 @@
 package org.dieschnittstelle.ess.basics;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
-
 public interface IStockItem {
 
 	default void purchase(int unitsToPurchase) {

@@ -1,23 +1,20 @@
 package org.dieschnittstelle.ess.ser;
 
-import java.io.*;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Enumeration;
-import java.util.Locale;
-import java.util.stream.Collectors;
-
 import jakarta.servlet.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
 import jakarta.servlet.http.HttpServletResponse;
-
-import static org.dieschnittstelle.ess.utils.Utils.*;
-
 import org.apache.commons.io.output.TeeOutputStream;
-
 import org.apache.logging.log4j.Logger;
+
+import java.io.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.Locale;
+
+import static org.dieschnittstelle.ess.utils.Utils.show;
 
 /**
  * example of a filter, taken from Crawford/Kaplan, JEE Design Patterns, 2003

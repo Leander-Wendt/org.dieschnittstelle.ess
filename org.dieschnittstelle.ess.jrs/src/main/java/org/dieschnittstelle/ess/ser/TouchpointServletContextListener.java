@@ -1,13 +1,12 @@
 package org.dieschnittstelle.ess.ser;
 
-import java.io.File;
-
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
-
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
-import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+
+import java.io.File;
 
 public class TouchpointServletContextListener implements ServletContextListener {
 

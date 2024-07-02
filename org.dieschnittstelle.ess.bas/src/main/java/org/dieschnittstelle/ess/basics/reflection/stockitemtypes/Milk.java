@@ -1,11 +1,9 @@
 package org.dieschnittstelle.ess.basics.reflection.stockitemtypes;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
-
 import org.dieschnittstelle.ess.basics.IStockItem;
 import org.dieschnittstelle.ess.basics.annotations.DisplayAs;
 
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import static org.dieschnittstelle.ess.utils.Utils.show;
 
 public class Milk implements IStockItem {
 

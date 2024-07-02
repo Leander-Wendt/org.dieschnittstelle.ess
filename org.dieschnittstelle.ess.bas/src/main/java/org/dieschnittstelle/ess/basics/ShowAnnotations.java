@@ -10,7 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import static org.dieschnittstelle.ess.basics.reflection.ReflectedStockItemBuilder.getAccessorNameForField;
-import static org.dieschnittstelle.ess.utils.Utils.*;
+import static org.dieschnittstelle.ess.utils.Utils.show;
 
 public class ShowAnnotations {
 

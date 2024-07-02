@@ -1,13 +1,12 @@
 package org.dieschnittstelle.ess.entities.crm;
 
-import java.io.Serializable;
-import org.apache.logging.log4j.Logger;
-
 import jakarta.persistence.Entity;
-
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
+import java.io.Serializable;
 
 @Entity
 @Schema(name="Address")

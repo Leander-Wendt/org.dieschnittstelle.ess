@@ -5,7 +5,6 @@ import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
-import org.apache.http.nio.client.HttpAsyncClient;
 
 public class Http {
 
