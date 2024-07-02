@@ -1,11 +1,12 @@
 package org.dieschnittstelle.ess.mip.components.crm.api;
 
+import java.util.List;
+
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
-
-import java.util.List;
 
 @Path("/touchpoints")
 @Produces({MediaType.APPLICATION_JSON})

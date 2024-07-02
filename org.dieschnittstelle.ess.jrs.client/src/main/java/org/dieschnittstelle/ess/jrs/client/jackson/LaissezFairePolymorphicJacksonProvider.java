@@ -9,8 +9,9 @@ import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.ext.Provider;
-import org.apache.logging.log4j.Logger;
 import org.jboss.resteasy.plugins.providers.jackson.ResteasyJackson2Provider;
+
+import org.apache.logging.log4j.Logger;
 
 @Provider
 @Consumes({"application/json", "application/*+json", "text/json"})

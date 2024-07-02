@@ -2,6 +2,8 @@ package org.dieschnittstelle.ess.basics;
 
 import org.dieschnittstelle.ess.basics.reflection.ReflectedStockItemBuilder;
 
+import static org.dieschnittstelle.ess.utils.Utils.*;
+
 public class ShowReflection {
 	
 	public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package org.dieschnittstelle.ess.entities.erp;
 
 import jakarta.persistence.*;
+
 import org.apache.logging.log4j.Logger;
 
 @Entity

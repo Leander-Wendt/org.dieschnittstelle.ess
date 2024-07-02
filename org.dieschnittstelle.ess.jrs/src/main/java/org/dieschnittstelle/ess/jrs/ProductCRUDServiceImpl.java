@@ -5,6 +5,7 @@ import jakarta.ws.rs.NotFoundException;
 import jakarta.ws.rs.core.Context;
 import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
+import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 
 import java.util.List;
 

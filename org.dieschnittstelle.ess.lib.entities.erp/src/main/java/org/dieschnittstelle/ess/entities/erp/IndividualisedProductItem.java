@@ -1,12 +1,14 @@
 package org.dieschnittstelle.ess.entities.erp;
 
-import jakarta.json.bind.annotation.JsonbTypeSerializer;
-import jakarta.persistence.*;
+import java.io.Serializable;
+
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.utils.jsonb.JsonbJsonTypeInfoHandler;
 
-import java.io.Serializable;
+import jakarta.json.bind.annotation.JsonbTypeDeserializer;
+import jakarta.json.bind.annotation.JsonbTypeSerializer;
+import jakarta.persistence.*;
 
 @Entity
 @JsonbTypeSerializer(JsonbJsonTypeInfoHandler.class)

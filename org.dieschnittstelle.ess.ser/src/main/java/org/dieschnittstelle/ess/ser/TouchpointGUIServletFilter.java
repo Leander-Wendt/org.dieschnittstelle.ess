@@ -1,13 +1,20 @@
 package org.dieschnittstelle.ess.ser;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import static org.dieschnittstelle.ess.utils.Utils.*;
+
+import org.apache.logging.log4j.Logger;
 
 /**
  * checks whether the gui servlet is accessed by a user agent that accepts html

@@ -1,13 +1,20 @@
 package org.dieschnittstelle.ess.ser;
 
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.dieschnittstelle.ess.utils.Utils.*;
+
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 import org.dieschnittstelle.ess.entities.crm.Address;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * partial CRUD operations for AbstractTouchpoint objects which are read in /

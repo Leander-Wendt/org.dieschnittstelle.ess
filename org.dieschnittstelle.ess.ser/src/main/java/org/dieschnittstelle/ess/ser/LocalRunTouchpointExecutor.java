@@ -1,15 +1,15 @@
 package org.dieschnittstelle.ess.ser;
 
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
-import org.dieschnittstelle.ess.entities.crm.MobileTouchpoint;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import static org.dieschnittstelle.ess.utils.Utils.*;
+
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.entities.crm.MobileTouchpoint;
 
 public class LocalRunTouchpointExecutor {
 

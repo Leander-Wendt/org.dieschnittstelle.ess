@@ -1,14 +1,14 @@
 package org.dieschnittstelle.ess.mip.client.shopping;
 
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
-import org.dieschnittstelle.ess.entities.crm.Customer;
-import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 import org.dieschnittstelle.ess.entities.erp.Campaign;
 import org.dieschnittstelle.ess.entities.shopping.ShoppingCartItem;
 import org.dieschnittstelle.ess.mip.client.apiclients.ServiceProxyFactory;
 import org.dieschnittstelle.ess.mip.client.apiclients.ShoppingCartClient;
 import org.dieschnittstelle.ess.mip.components.shopping.api.PurchaseService;
 import org.dieschnittstelle.ess.mip.components.shopping.api.ShoppingException;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.entities.crm.Customer;
+import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
 
 public class PurchaseServiceClient implements ShoppingBusinessDelegate {
 

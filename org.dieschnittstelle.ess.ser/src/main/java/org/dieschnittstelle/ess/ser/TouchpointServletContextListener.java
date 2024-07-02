@@ -1,13 +1,14 @@
 package org.dieschnittstelle.ess.ser;
 
-import jakarta.servlet.ServletContextEvent;
-import jakarta.servlet.ServletContextListener;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+
+import static org.dieschnittstelle.ess.utils.Utils.*;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class TouchpointServletContextListener implements ServletContextListener {
 

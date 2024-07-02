@@ -1,7 +1,10 @@
 package org.dieschnittstelle.ess.jrs.client;
 
-import jakarta.ws.rs.client.Client;
-import jakarta.ws.rs.client.ClientBuilder;
+import java.util.List;
+
+//import com.fasterxml.jackson.databind.JavaType;
+//import com.fasterxml.jackson.databind.cfg.MapperConfig;
+//import com.fasterxml.jackson.databind.jsontype.PolymorphicTypeValidator;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.crm.Address;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
@@ -10,9 +13,10 @@ import org.dieschnittstelle.ess.jrs.client.jackson.LaissezFairePolymorphicJackso
 import org.dieschnittstelle.ess.utils.Utils;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
-import java.util.List;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import static org.dieschnittstelle.ess.utils.Utils.*;
 
 public class ShowTouchpointRESTService {
 

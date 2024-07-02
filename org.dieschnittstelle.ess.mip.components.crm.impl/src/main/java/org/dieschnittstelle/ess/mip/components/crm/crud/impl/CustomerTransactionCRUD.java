@@ -1,8 +1,11 @@
 package org.dieschnittstelle.ess.mip.components.crm.crud.impl;
 
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
 
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 import java.util.List;
 
 public interface CustomerTransactionCRUD {

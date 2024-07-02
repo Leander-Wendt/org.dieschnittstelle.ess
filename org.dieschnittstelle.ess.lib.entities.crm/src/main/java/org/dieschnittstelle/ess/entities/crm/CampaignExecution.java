@@ -1,8 +1,8 @@
 package org.dieschnittstelle.ess.entities.crm;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.json.bind.annotation.JsonbTransient;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import java.io.Serializable;
 
 /**

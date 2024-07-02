@@ -1,12 +1,13 @@
 package org.dieschnittstelle.ess.mip.components.crm.api;
 
+import java.util.List;
+
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
-
-import java.util.List;
 
 @Path("/tracking")
 @Produces({MediaType.APPLICATION_JSON})

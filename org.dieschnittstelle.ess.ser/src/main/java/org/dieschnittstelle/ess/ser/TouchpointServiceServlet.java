@@ -8,10 +8,7 @@ import org.apache.http.entity.ByteArrayEntity;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 import static org.dieschnittstelle.ess.utils.Utils.show;
 

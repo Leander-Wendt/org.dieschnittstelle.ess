@@ -1,10 +1,10 @@
 package org.dieschnittstelle.ess.mip.client.demos;
 
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.mip.client.apiclients.ServiceProxyFactory;
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.dieschnittstelle.ess.mip.client.Constants;
 import org.dieschnittstelle.ess.mip.client.apiclients.CustomerCRUDClient;
-import org.dieschnittstelle.ess.mip.client.apiclients.ServiceProxyFactory;
 import org.dieschnittstelle.ess.utils.Utils;
 
 public class ShowConcurrentEntityAccess {

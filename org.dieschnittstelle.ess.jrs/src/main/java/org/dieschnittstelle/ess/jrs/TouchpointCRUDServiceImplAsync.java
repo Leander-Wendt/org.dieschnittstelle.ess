@@ -1,5 +1,10 @@
 package org.dieschnittstelle.ess.jrs;
 
+import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
+
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.*;
@@ -7,9 +12,9 @@ import jakarta.ws.rs.container.AsyncResponse;
 import jakarta.ws.rs.container.Suspended;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
-import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
-import org.eclipse.microprofile.openapi.annotations.Operation;
+import java.util.List;
+
+import org.eclipse.microprofile.openapi.annotations.*;
 
 /*
  * this class is a wrapper around the synchronous implementation that demonstrates an async service implementation

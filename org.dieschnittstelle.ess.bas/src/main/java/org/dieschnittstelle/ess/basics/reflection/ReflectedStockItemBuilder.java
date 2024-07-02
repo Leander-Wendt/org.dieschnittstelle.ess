@@ -1,5 +1,9 @@
 package org.dieschnittstelle.ess.basics.reflection;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.basics.IStockItem;
@@ -10,10 +14,8 @@ import org.w3c.dom.NodeList;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import static org.dieschnittstelle.ess.utils.Utils.*;
 
 // this builder only reads in the item
 public class ReflectedStockItemBuilder implements IStockItemBuilder {

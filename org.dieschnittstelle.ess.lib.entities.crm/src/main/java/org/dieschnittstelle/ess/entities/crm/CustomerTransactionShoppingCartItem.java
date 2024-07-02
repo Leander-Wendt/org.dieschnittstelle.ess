@@ -1,12 +1,23 @@
 package org.dieschnittstelle.ess.entities.crm;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
+
 import jakarta.json.bind.annotation.JsonbTransient;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.PostLoad;
+import jakarta.persistence.PostPersist;
+import jakarta.persistence.PostRemove;
+import jakarta.persistence.PostUpdate;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreRemove;
+import jakarta.persistence.PreUpdate;
+import jakarta.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
-
-import java.io.Serializable;
 
 /**
  * a product bundle on the part of the crm system that tracks the number of

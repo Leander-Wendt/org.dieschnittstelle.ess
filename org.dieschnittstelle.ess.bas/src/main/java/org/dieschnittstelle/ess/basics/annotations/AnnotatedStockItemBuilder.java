@@ -1,14 +1,14 @@
 package org.dieschnittstelle.ess.basics.annotations;
 
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.basics.IStockItem;
 import org.dieschnittstelle.ess.basics.IStockItemBuilder;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 
 /*
  * tries to instantiate a stock item from an xml element and creates a proxy

@@ -1,11 +1,13 @@
 package org.dieschnittstelle.ess.jrs;
 
-import jakarta.ws.rs.ApplicationPath;
-import jakarta.ws.rs.core.Application;
 import org.dieschnittstelle.ess.jrs.opi.ProductCRUDServiceOPIImpl;
 import org.dieschnittstelle.ess.jrs.opi.TouchpointCRUDServiceOPIImpl;
 import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
 import org.eclipse.microprofile.openapi.annotations.info.Info;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.core.Application;
 
 import java.util.Arrays;
 import java.util.HashSet;

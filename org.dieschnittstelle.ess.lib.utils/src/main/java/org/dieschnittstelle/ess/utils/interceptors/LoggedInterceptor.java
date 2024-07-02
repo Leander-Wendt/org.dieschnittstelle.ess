@@ -1,10 +1,10 @@
 package org.dieschnittstelle.ess.utils.interceptors;
 
+import org.apache.logging.log4j.Logger;
+
 import jakarta.interceptor.AroundInvoke;
 import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
-import org.apache.logging.log4j.Logger;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;

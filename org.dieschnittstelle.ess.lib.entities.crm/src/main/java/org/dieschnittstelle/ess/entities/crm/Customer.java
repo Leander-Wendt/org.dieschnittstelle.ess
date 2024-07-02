@@ -1,14 +1,30 @@
 package org.dieschnittstelle.ess.entities.crm;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.json.bind.annotation.JsonbTransient;
-import jakarta.persistence.*;
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.logging.log4j.Logger;
-
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
+
+import jakarta.json.bind.annotation.JsonbTransient;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.PostLoad;
+import jakarta.persistence.PostPersist;
+import jakarta.persistence.PostRemove;
+import jakarta.persistence.PostUpdate;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreRemove;
+import jakarta.persistence.PreUpdate;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.logging.log4j.Logger;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 /*
  * 

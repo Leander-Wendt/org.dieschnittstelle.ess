@@ -1,23 +1,23 @@
 package org.dieschnittstelle.ess.mip.client.shopping;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.shopping.ShoppingCartItem;
+import org.dieschnittstelle.ess.mip.components.crm.api.CampaignTracking;
+import org.dieschnittstelle.ess.mip.components.crm.api.CustomerTracking;
+import org.dieschnittstelle.ess.mip.components.shopping.cart.api.ShoppingCart;
+import org.dieschnittstelle.ess.mip.components.shopping.api.ShoppingException;
 import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.entities.crm.CustomerTransactionShoppingCartItem;
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
-import org.dieschnittstelle.ess.entities.crm.CustomerTransactionShoppingCartItem;
-import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
-import org.dieschnittstelle.ess.entities.erp.Campaign;
-import org.dieschnittstelle.ess.entities.shopping.ShoppingCartItem;
 import org.dieschnittstelle.ess.mip.client.apiclients.CampaignTrackingClient;
 import org.dieschnittstelle.ess.mip.client.apiclients.CustomerTrackingClient;
 import org.dieschnittstelle.ess.mip.client.apiclients.ShoppingCartClient;
-import org.dieschnittstelle.ess.mip.components.crm.api.CampaignTracking;
-import org.dieschnittstelle.ess.mip.components.crm.api.CustomerTracking;
-import org.dieschnittstelle.ess.mip.components.shopping.api.ShoppingException;
-import org.dieschnittstelle.ess.mip.components.shopping.cart.api.ShoppingCart;
-
-import java.util.List;
-import java.util.stream.Collectors;
+import org.dieschnittstelle.ess.entities.erp.AbstractProduct;
+import org.dieschnittstelle.ess.entities.erp.Campaign;
 
 public class ShoppingSession implements ShoppingBusinessDelegate {
 

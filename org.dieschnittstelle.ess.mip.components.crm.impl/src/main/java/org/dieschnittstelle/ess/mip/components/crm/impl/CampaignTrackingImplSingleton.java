@@ -1,18 +1,19 @@
 package org.dieschnittstelle.ess.mip.components.crm.impl;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-import jakarta.enterprise.context.ApplicationScoped;
-import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
-import org.dieschnittstelle.ess.entities.crm.CampaignExecution;
-import org.dieschnittstelle.ess.mip.components.crm.api.CampaignTracking;
-import org.dieschnittstelle.ess.utils.interceptors.Logged;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.enterprise.context.ApplicationScoped;
+
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.entities.crm.CampaignExecution;
+import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.mip.components.crm.api.CampaignTracking;
+import org.dieschnittstelle.ess.utils.interceptors.Logged;
 
 /**
  * tracks the execution of a compaign

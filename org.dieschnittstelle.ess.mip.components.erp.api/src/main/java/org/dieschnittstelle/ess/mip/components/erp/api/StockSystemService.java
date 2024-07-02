@@ -5,6 +5,7 @@ import jakarta.ws.rs.core.MediaType;
 import org.dieschnittstelle.ess.entities.erp.IndividualisedProductItem;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import java.awt.*;
 import java.util.List;
 
 /**

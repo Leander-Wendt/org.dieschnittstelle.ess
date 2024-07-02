@@ -1,14 +1,17 @@
 package org.dieschnittstelle.ess.jrs;
 
+import java.util.List;
+
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.NotFoundException;
+import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Context;
-import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
-import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 
-import java.util.List;
+import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
+import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
+import org.dieschnittstelle.ess.entities.GenericCRUDExecutor;
 
 public class TouchpointCRUDServiceImpl implements ITouchpointCRUDService {
 

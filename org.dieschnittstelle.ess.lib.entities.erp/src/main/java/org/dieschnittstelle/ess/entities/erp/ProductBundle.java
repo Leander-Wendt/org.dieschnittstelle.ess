@@ -1,10 +1,10 @@
 package org.dieschnittstelle.ess.entities.erp;
 
-import jakarta.persistence.*;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.logging.log4j.Logger;
 
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity

@@ -1,9 +1,9 @@
 package org.dieschnittstelle.ess.mip.components.crm.crud.api;
 
-import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
-import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
-
 import java.util.List;
+
+import org.dieschnittstelle.ess.mip.components.crm.api.CrmException;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 
 public interface TouchpointCRUD {
 

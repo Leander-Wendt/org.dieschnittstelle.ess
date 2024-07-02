@@ -1,12 +1,13 @@
 package org.dieschnittstelle.ess.ser;
 
+import org.apache.logging.log4j.Logger;
+import org.dieschnittstelle.ess.entities.crm.Address;
+import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.apache.logging.log4j.Logger;
-import org.dieschnittstelle.ess.entities.crm.Address;
-import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 
 import static org.dieschnittstelle.ess.utils.Utils.show;
 

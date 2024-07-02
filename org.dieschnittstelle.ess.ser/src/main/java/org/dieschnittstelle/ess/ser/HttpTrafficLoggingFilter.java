@@ -1,14 +1,24 @@
 package org.dieschnittstelle.ess.ser;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.HttpServletRequest;
-import org.apache.logging.log4j.Logger;
-
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Enumeration;
+import java.util.stream.Collectors;
 
-import static org.dieschnittstelle.ess.utils.Utils.show;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+
+import static org.dieschnittstelle.ess.utils.Utils.*;
+
+import org.apache.logging.log4j.Logger;
 
 /**
  * example of a filter, taken from Crawford/Kaplan, JEE Design Patterns, 2003
