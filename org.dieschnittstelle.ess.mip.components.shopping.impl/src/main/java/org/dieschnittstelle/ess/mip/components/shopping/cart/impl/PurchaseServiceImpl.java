@@ -62,7 +62,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 
     public void verifyCampaigns() throws ShoppingException {
         if (this.customer == null || this.touchpoint == null) {
-            throw new RuntimeException("cannot verify campaigns! No touchpoint has been set!");
+            throw new RuntimeException("No touchpoint has been set!");
         }
 
         for (ShoppingCartItem item : this.shoppingCart.getItems()) {
