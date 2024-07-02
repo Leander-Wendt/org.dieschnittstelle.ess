@@ -10,7 +10,7 @@ public class TouchpointAccessClient implements TouchpointAccess {
 	
 	private TouchpointAccess serviceProxy;
 	
-	public TouchpointAccessClient() throws Exception {
+	public TouchpointAccessClient() {
 		this.serviceProxy = ServiceProxyFactory.getInstance().getProxy(TouchpointAccess.class);
 	}
 	
@@ -21,7 +21,7 @@ public class TouchpointAccessClient implements TouchpointAccess {
 
 	@Override
 	public AbstractTouchpoint readTouchpoint(long id) {
-		return null;
+		return serviceProxy.readTouchpoint(id);
 	}
 
 	@Override
