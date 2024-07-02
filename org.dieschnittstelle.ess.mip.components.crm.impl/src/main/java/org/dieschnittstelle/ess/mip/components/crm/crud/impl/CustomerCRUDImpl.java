@@ -1,6 +1,7 @@
 package org.dieschnittstelle.ess.mip.components.crm.crud.impl;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Alternative;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
@@ -8,10 +9,14 @@ import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.dieschnittstelle.ess.mip.components.crm.crud.api.CustomerCRUD;
 import org.dieschnittstelle.ess.utils.interceptors.Logged;
+import jakarta.interceptor.Interceptor;
+import jakarta.annotation.Priority;
 
 @Logged
 @ApplicationScoped
 @Transactional
+@Alternative
+@Priority(Interceptor.Priority.APPLICATION + 10)
 public class CustomerCRUDImpl implements CustomerCRUD {
 
 	protected static Logger logger = org.apache.logging.log4j.LogManager.getLogger(CustomerCRUDImpl.class);
