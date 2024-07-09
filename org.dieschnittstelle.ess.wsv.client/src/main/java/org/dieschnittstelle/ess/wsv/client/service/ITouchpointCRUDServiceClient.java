@@ -1,6 +1,7 @@
 package org.dieschnittstelle.ess.wsv.client.service;
 
 import jakarta.ws.rs.*;
+import org.dieschnittstelle.ess.entities.crm.AbstractTouchpoint;
 import org.dieschnittstelle.ess.entities.crm.StationaryTouchpoint;
 
 import java.util.List;
@@ -9,16 +10,18 @@ import java.util.List;
 @Consumes({ "application/json" })
 @Produces({ "application/json" })
 public interface ITouchpointCRUDServiceClient {
+
+	// TODO WSV change stationary touchpoint to abstract touchpoint and make it usable
 	
 	@GET
-	List<StationaryTouchpoint> readAllTouchpoints();
+	List<AbstractTouchpoint> readAllTouchpoints();
 
 	@GET
 	@Path("/{touchpointId}")
-	StationaryTouchpoint readTouchpoint(@PathParam("touchpointId") long id);
+	AbstractTouchpoint readTouchpoint(@PathParam("touchpointId") long id);
 
 	@POST
-	StationaryTouchpoint createTouchpoint(StationaryTouchpoint touchpoint);
+	AbstractTouchpoint createTouchpoint(StationaryTouchpoint touchpoint);
 	
 	@DELETE
 	@Path("/{touchpointId}")
@@ -26,6 +29,6 @@ public interface ITouchpointCRUDServiceClient {
 
 	@PUT
 	@Path("/{touchpointId}")
-	StationaryTouchpoint updateTouchpoint(@PathParam("touchpointId") long id,StationaryTouchpoint touchpoint);
+	AbstractTouchpoint updateTouchpoint(@PathParam("touchpointId") long id,StationaryTouchpoint touchpoint);
 
 }

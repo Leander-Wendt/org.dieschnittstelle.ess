@@ -213,8 +213,6 @@ public class JSONObjectMapper {
                         throw new ObjectMappingException(
                                 "Cannot instantiate class: " + type);
                     }
-
-
                 } else {
                     obj = ((Class) type).newInstance();
                 }
