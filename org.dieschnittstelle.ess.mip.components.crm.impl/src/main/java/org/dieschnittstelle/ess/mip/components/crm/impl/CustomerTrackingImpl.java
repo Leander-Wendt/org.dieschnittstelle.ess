@@ -2,8 +2,11 @@ package org.dieschnittstelle.ess.mip.components.crm.impl;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import jakarta.annotation.Priority;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Alternative;
 import jakarta.inject.Inject;
+import jakarta.interceptor.Interceptor;
 import org.apache.logging.log4j.Logger;
 import org.dieschnittstelle.ess.entities.crm.Customer;
 import org.dieschnittstelle.ess.entities.crm.CustomerTransaction;
@@ -19,6 +22,8 @@ import java.util.List;
  */
 @Logged
 @ApplicationScoped
+@Alternative
+@Priority(Interceptor.Priority.APPLICATION + 10)
 public class CustomerTrackingImpl implements CustomerTracking {
 
 	protected static Logger logger = org.apache.logging.log4j.LogManager
