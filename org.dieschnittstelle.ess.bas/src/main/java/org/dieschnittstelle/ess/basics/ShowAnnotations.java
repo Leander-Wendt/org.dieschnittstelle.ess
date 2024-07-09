@@ -63,7 +63,7 @@ public class ShowAnnotations {
                 String fieldAccessor = getAccessorNameForField("get", field.getName());
                 boolean isAnnotated = field.isAnnotationPresent(DisplayAs.class);
                 String displayName = isAnnotated ? field.getAnnotation(DisplayAs.class).value() : field.getName();
-                
+
                 try {
                     Method getter = CLASS.getDeclaredMethod(fieldAccessor);
                     stringBuilder.append(displayName).append(": ");
@@ -81,7 +81,5 @@ public class ShowAnnotations {
             e.printStackTrace();
             throw new RuntimeException("showAnnotations(): exception occurred: " + e, e);
         }
-
     }
-
 }
