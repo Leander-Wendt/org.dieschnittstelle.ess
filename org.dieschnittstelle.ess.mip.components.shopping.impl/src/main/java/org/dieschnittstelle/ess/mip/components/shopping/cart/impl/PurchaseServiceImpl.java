@@ -60,27 +60,6 @@ public class PurchaseServiceImpl implements PurchaseService {
 
     private AbstractTouchpoint touchpoint;
 
-    public void verifyCampaigns() throws ShoppingException {
-        if (this.customer == null || this.touchpoint == null) {
-            throw new RuntimeException("No touchpoint has been set!");
-        }
-
-        for (ShoppingCartItem item : this.shoppingCart.getItems()) {
-            if (item.isCampaign()) {
-                int availableCampaigns = this.campaignTracking.existsValidCampaignExecutionAtTouchpoint(
-                        item.getErpProductId(), this.touchpoint);
-                logger.info("got available campaigns for product " + item.getErpProductId() + ": "
-                        + availableCampaigns);
-
-                if (availableCampaigns < item.getUnits()) {
-                    throw new ShoppingException("verifyCampaigns() failed for productBundle " + item
-                            + " at touchpoint " + this.touchpoint + "! Need " + item.getUnits()
-                            + " instances of campaign, but only got: " + availableCampaigns);
-                }
-            }
-        }
-    }
-
     public void purchase() throws ShoppingException {
         if (this.customer == null || this.touchpoint == null) {
             throw new RuntimeException("cannot commit shopping session! Either customer or touchpoint has not been set: " + this.customer + "/" + this.touchpoint);
@@ -91,14 +70,33 @@ public class PurchaseServiceImpl implements PurchaseService {
         checkAndRemoveProductsFromStock();
 
         List<ShoppingCartItem> productsInCart = this.shoppingCart.getItems();
+        // Create TransactionShoppingCartItems from products in the cart and collect them to a list
         List<CustomerTransactionShoppingCartItem> productsInCartForTransaction = productsInCart
                 .stream()
                 .map(si -> new CustomerTransactionShoppingCartItem(si.getErpProductId(), si.getUnits(), si.isCampaign()))
                 .collect(Collectors.toList());
-        CustomerTransaction transaction = new CustomerTransaction(this.customer, this.touchpoint,
-                productsInCartForTransaction);
+        CustomerTransaction transaction = new CustomerTransaction(this.customer, this.touchpoint, productsInCartForTransaction);
         transaction.setCompleted(true);
         customerTracking.createTransaction(transaction);
+    }
+
+    private void verifyCampaigns() throws ShoppingException {
+        if (this.customer == null || this.touchpoint == null) {
+            throw new RuntimeException("No touchpoint has been set!");
+        }
+
+        for (ShoppingCartItem item : this.shoppingCart.getItems()) {
+            if (item.isCampaign()) {
+                int availableCampaigns = this.campaignTracking.existsValidCampaignExecutionAtTouchpoint(item.getErpProductId(), this.touchpoint);
+                logger.info("got available campaigns for product " + item.getErpProductId() + ": " + availableCampaigns);
+
+                if (availableCampaigns < item.getUnits()) {
+                    throw new ShoppingException("verifyCampaigns() failed for productBundle " + item
+                            + " at touchpoint " + this.touchpoint + "! Need " + item.getUnits()
+                            + " instances of campaign, but only got: " + availableCampaigns);
+                }
+            }
+        }
     }
 
     private void checkAndRemoveProductsFromStock() {
